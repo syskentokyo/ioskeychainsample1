@@ -23,13 +23,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki1-Fk-nN1">
-                                <rect key="frame" x="60" y="431" width="295" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-FC-JpE">
+                                <rect key="frame" x="63" y="321" width="295" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Read"/>
                                 <connections>
-                                    <action selector="onTouchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0x-ve-hjI"/>
+                                    <action selector="onTouchedReadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldp-lx-kpM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-9z-SGc">
+                                <rect key="frame" x="76" y="451" width="269" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="onEndEdit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="n8w-Ac-M1O"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki1-Fk-nN1">
+                                <rect key="frame" x="63" y="493" width="295" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="onTouchedSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xB-IP-JqR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,7 +55,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="_logLabel" destination="C05-6g-PlG" id="WFj-Od-Pbe"/>
+                        <outlet property="_inputField" destination="vRb-9z-SGc" id="Z7K-Q7-sif"/>
+                        <outlet property="_logLabel" destination="C05-6g-PlG" id="ZTI-eQ-Pkx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
